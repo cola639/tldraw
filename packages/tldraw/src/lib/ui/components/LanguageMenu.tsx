@@ -9,6 +9,7 @@ export function LanguageMenu() {
 	const editor = useEditor()
 	const trackEvent = useUiEvents()
 	const currentLanguage = useValue('locale', () => editor.user.getLocale(), [editor])
+	console.log('🚀 >> LanguageMenu >> currentLanguage:', currentLanguage)
 
 	return (
 		<TldrawUiMenuSubmenu id="help menu language" label="menu.language">

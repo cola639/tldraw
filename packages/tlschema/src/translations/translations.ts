@@ -12,7 +12,10 @@ export type TLLanguage = (typeof LANGUAGES)[number]
 
 /** @public */
 export function getDefaultTranslationLocale(): TLLanguage['locale'] {
-	const locales = typeof window !== 'undefined' ? window.navigator.languages ?? ['en'] : ['en']
+	const locales = ['zh-cn']
+	// 原来根据 window.navigator.languages设置默认语言
+	// const locales = typeof window !== 'undefined' ? window.navigator.languages ?? ['en'] : ['en']
+	// console.log('🚀 >> getDefaultTranslationLocale >> locales:', locales)
 	return _getDefaultTranslationLocale(locales)
 }
 
